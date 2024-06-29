@@ -176,11 +176,10 @@
     display: none; /* Ocultar la lista de navegación en dispositivos móviles por defecto */
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 68px;
     left: 0;
     width: 100%;
-    background-color: #ffffff; /* Color de fondo del menú hamburguesa */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    background-color: #000000; /* Color de fondo del menú hamburguesa */
     z-index: 1;
     transition: transform 0.3s ease-in-out;
     transform: translateY(-100%);
@@ -188,6 +187,9 @@
 
   .navbar-nav.active {
     display: flex; /* Mostrar la lista de navegación cuando el menú hamburguesa está activo */
+    margin: 0px;
+    padding: 30px 0px;
+    gap: 10px;
     transform: translateY(0);
   }
 
@@ -197,11 +199,18 @@
   }
 
   .menu-icon {
-    color: #fff; /* Color del icono de menú */
+    color: rgb(41, 126, 255);
     display: block; /* Mostrar el icono de menú en dispositivos móviles */
     cursor: pointer;
     font-size: 24px; /* Tamaño del icono de menú */
     padding: 10px;
+  }
+  .nav-item {
+    margin: 0 10px; /* Espacio entre elementos del navbar */
+  }
+  
+  .nav-link {
+    font-size: 16px;
   }
 
   /* Header */
