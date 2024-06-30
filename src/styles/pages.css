@@ -65,19 +65,38 @@
   background-color: #0056b3; /* Color de fondo al pasar el ratón por encima */
 }
 
+/* styles.css */
 .headerContainer {
+  position: relative;
   width: 100%;
-  padding: 150px 0px;
-  background-color: #000000;
+  padding: 150px 0;
+  background: url('/public/img/banner.jpg') no-repeat center center;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
+.headerContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Ajusta el color y la opacidad según sea necesario */
+  z-index: 1;
+}
+
+.title, .subTitle {
+  position: relative;
+  z-index: 2;
+}
+
 .title {
   font-size: 60px;
   color: rgb(41, 126, 255);
-  margin: 0px;
+  margin: 0;
   padding-bottom: 15px;
   text-align: center;
   font-family: "Press Start 2P", system-ui;
@@ -87,6 +106,7 @@
   color: white;
   text-align: center;
 }
+
 
 .about-event {
   display: flex;
