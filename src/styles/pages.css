@@ -184,10 +184,74 @@
 }
 
 .countdown-timer {
+  font-weight: bold;
   text-align: center;
   font-size: 1.5rem;
   color: rgb(41, 126, 255);
+  text-shadow: 0px 0px 20px rgb(0, 8, 255); /* Ejemplo de sombra suave para el texto */
 }
+
+
+/* Footer */
+
+.footer {
+  background-color: #000000;
+  border-top: 1px solid rgb(41, 126, 255);;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 20px;
+}
+
+.footerLogo {
+  width: 200px;
+}
+
+.footer-section h4 {
+  color: rgb(41, 126, 255);
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+  color: white;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  color: rgb(255, 255, 255);
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #0056b3;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #0b0b0b;
+}
+
+.footer-bottom p {
+  font-size: 10px;
+  margin: 0;
+}
+
+
 
 @media (max-width: 768px) {
 
@@ -328,7 +392,39 @@
 
 .countdown-timer {
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   color: rgb(41, 126, 255);
 }
+
+/* Footer */
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 20px 10px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px 10px;
+}
+
+.footerLogo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-section h4 {
+  font-size: 14px;
+  color: rgb(41, 126, 255);
+  margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+  font-size: 12px;
+}
+
 }

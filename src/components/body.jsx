@@ -2,6 +2,7 @@ import React from 'react';
 import CountdownTimer from './timer';
 import '../styles/pages.css'; // Asegúrate de tener este archivo CSS configurado con tus estilos
 import { Fade } from 'react-awesome-reveal'; // Importa el componente Fade de react-awesome-reveal
+import Footer from './footer';
 
 const sponsorsData = [
     { id: 1, name: "a16zCryptoResearch", image: "/img/a16zCryptoResearch.png", url:"https://a16zcrypto.com/"},
@@ -78,6 +79,8 @@ const Body = () => {
                 <p className='date'>July 15, 2024 at 5:30 PM - Dubai, ATLANTIS, THE PALM</p>
                 <CountdownTimer deadline={deadline} />
             </section>
+            
+            <Footer/>
         </div>
     );
 };
