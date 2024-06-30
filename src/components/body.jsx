@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CountdownTimer from './timer';
 import '../styles/pages.css'; // Asegúrate de tener este archivo CSS configurado con tus estilos
 import { Fade } from 'react-awesome-reveal'; // Importa el componente Fade de react-awesome-reveal
@@ -17,18 +17,18 @@ const sponsorsData = [
 ];
 
 const speakersData = [
-    { name: "Fred Zhou", image: "/img/Fred Zhou.jpg", topic: "What Web 3.0 Means for Enterprises" },
-    { name: "Adrian Zduńczyk", image: "/img/Adrian Zdunczyk.jpg", topic: "Value Creation in the Metaverse" },
-    { name: "Victoria Scholar", image: "/img/Victoria Scholar.jpg", topic: "The Role of Stablecoins in a Decentralized Ecosystem" },
-    { name: "Stephen Lindsay", image: "/img/Stephen Lindsay.jpg", topic: "DAOs: New Breed of Internet-Native Organizations" },
-    { name: "Daniel Antcliff", image: "/img/Daniel Antcliff.jpg", topic: "Maximizing ESG Impact with Blockchain" },
-    { name: "Ilyas Vali", image: "/img/Ilyas Vali.jpg", topic: "Bridging DeFi and CeFi" },
-    { name: "Russell Armand", image: "/img/Russell Armand.jpg", topic: "Web 3 Gaming: The New Frontier?" },
-    { name: "Danny Winn", image: "/img/Danny Winn.jpg", topic: "Decrypting the Regulatory Landscape of Virtual Assets" },
-    { name: "Lex Sokolin", image: "/img/Lex Sokolin.jpg", topic: "Central Bank Digital Currencies, and Cross-Border Payments" },
-    { name: "Pieter Vanhove", image: "/img/Pieter Vanhove.jpg", topic: "Web 3: The Future is Here and Now" },
-    { name: "Lennix Lai", image: "/img/Lennix Lai.jpg", topic: "NFT Market Overview: Trends & Opportunities" },
-    { name: "Delphine Forma", image: "/img/Delphine Forma.jpg", topic: "Interoperability - Challenges and Opportunities" }
+    { name: "Fred Zhou", image: "/img/Fred Zhou.jpg", topic: "What Web 3.0 Means for Enterprises", company: "/img/al-serkal-group-logo.png" },
+    { name: "Adrian Zduńczyk", image: "/img/Adrian Zdunczyk.jpg", topic: "Value Creation in the Metaverse", company: "/img/one-football.png" },
+    { name: "Victoria Scholar", image: "/img/Victoria Scholar.jpg", topic: "The Role of Stablecoins in a Decentralized Ecosystem", company: "/img/ripple.png" },
+    { name: "Stephen Lindsay", image: "/img/Stephen Lindsay.jpg", topic: "DAOs: New Breed of Internet-Native Organizations", company: "/img/vechain.png" },
+    { name: "Daniel Antcliff", image: "/img/Daniel Antcliff.jpg", topic: "Maximizing ESG Impact with Blockchain" , company: "/img/lisk.png" },
+    { name: "Ilyas Vali", image: "/img/Ilyas Vali.jpg", topic: "Bridging DeFi and CeFi", company: "/img/bitget.avif" },
+    { name: "Russell Armand", image: "/img/Russell Armand.jpg", topic: "Web 3 Gaming: The New Frontier?" , company: "/img/ledger.png" },
+    { name: "Danny Winn", image: "/img/Danny Winn.jpg", topic: "Decrypting the Regulatory Landscape of Virtual Assets", company: "/img/coinmena.png" },
+    { name: "Lex Sokolin", image: "/img/Lex Sokolin.jpg", topic: "Central Bank Digital Currencies, and Cross-Border Payments" , company: "/img/binance-logo.png" },
+    { name: "Pieter Vanhove", image: "/img/Pieter Vanhove.jpg", topic: "Web 3: The Future is Here and Now" , company: "/img/fireblocks.png" },
+    { name: "Lennix Lai", image: "/img/Lennix Lai.jpg", topic: "NFT Market Overview: Trends & Opportunities" , company: "/img/okx.png" },
+    { name: "Delphine Forma", image: "/img/Delphine Forma.jpg", topic: "Interoperability - Challenges and Opportunities" , company: "/img/difc.png" }
 ];
 
 const Body = () => {
@@ -52,7 +52,10 @@ const Body = () => {
                     {speakersData.map((speaker, index) => (
                         <Fade key={index} triggerOnce>
                             <div className="speaker-card">
-                                <img src={speaker.image} alt={speaker.name} className="speaker-image" />
+                                <div className="speaker-image-container">
+                                    <img src={speaker.image} alt={speaker.name} className="speaker-image" />
+                                    <img src={speaker.company} alt={speaker.company} className="speaker-company"/>
+                                </div>
                                 <div className="speaker-info">
                                     <h3 className="speaker-name">{speaker.name}</h3>
                                     <p className="speaker-topic">{speaker.topic}</p>

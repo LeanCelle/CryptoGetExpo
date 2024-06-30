@@ -140,13 +140,33 @@
 }
 
 .speaker-card {
+  text-align: center;
+  position: relative;
   width: 21vw;
-  padding: 20px 20px;
+  padding: 20px;
+}
+
+.speaker-image-container {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .speaker-image {
   width: 200px;
 }
+
+.speaker-company {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 50px;
+  max-height: 30px;
+  background: none;
+}
+
+
 
 .speaker-name {
   color: rgb(41, 126, 255);
@@ -204,13 +224,18 @@
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: start;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   margin: 20px;
 }
