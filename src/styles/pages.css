@@ -123,8 +123,10 @@
 
 /* Speakers */
 
+#Speakers {
+  background: url('/public/img/spekers-background.svg') center center;
+}
 .speakersAndTopics {
-  background-color: #000000;
   color: white;
   margin: 0px;
   padding: 20px 40px;
@@ -132,7 +134,6 @@
 }
 
 .speaker-grid {
-  background-color: #000000;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -273,7 +274,7 @@
     display: flex; /* Mostrar la lista de navegación cuando el menú hamburguesa está activo */
     margin: 0px;
     padding: 30px 0px;
-    gap: 10px;
+    gap: 30px;
     transform: translateY(0);
   }
 
@@ -326,15 +327,12 @@
   /* Speakers */
 
 .speakersAndTopics {
-  background-color: #000000;
-  color: white;
   margin: 0px;
   padding: 20px 40px;
   font-size: 20px;
 }
 
 .speaker-grid {
-  background-color: #000000;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
