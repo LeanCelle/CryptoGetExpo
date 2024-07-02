@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import CountdownTimer from './timer';
 import '../styles/pages.css'; // Asegúrate de tener este archivo CSS configurado con tus estilos
 import { Fade } from 'react-awesome-reveal'; // Importa el componente Fade de react-awesome-reveal
@@ -71,7 +70,7 @@ const Body = () => {
                     {sponsorsData.map((sponsor) => (
                         <Fade key={sponsor.id} triggerOnce>
                             <div className="sponsor-card">
-                                <a href={sponsor.url} target='_blank'><img className='sponsorsLogo' src={sponsor.image} alt={sponsor.name} /></a>
+                                <a href={sponsor.url} target='_blank' rel='noreferrer'><img className='sponsorsLogo' src={sponsor.image} alt={sponsor.name} /></a>
                             </div>
                         </Fade>
                     ))}

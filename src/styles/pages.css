@@ -7,7 +7,6 @@
 /* Navbar */
 
 .navbar {
-  position: sticky;
   top: 0;
   z-index: 1000; /* Ajusta el z-index según sea necesario */
   display: flex;
@@ -59,6 +58,7 @@
   cursor: pointer; /* Cursor tipo puntero */
   font-size: 16px; /* Tamaño de fuente */
   transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+  border-radius: 15px;
 }
 
 .buy-ticket-btn:hover {
