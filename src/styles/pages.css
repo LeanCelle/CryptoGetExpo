@@ -206,9 +206,10 @@
 }
 
 .countdown-timer {
+  font-family: "Press Start 2P", system-ui;
   font-weight: bold;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 14px;
   color: rgb(41, 126, 255);
   text-shadow: 0px 0px 20px rgb(0, 8, 255); /* Ejemplo de sombra suave para el texto */
 }
@@ -416,7 +417,7 @@
 
 .countdown-timer {
   text-align: center;
-  font-size: 18px;
+  font-size: 10px;
   color: rgb(41, 126, 255);
 }
 
